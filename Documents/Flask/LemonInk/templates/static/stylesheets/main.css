@@ -1,0 +1,46 @@
+body {
+    font-family: 'Neucha', cursive;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*
+#83b330 - Darker Shade Green
+#9fe32b - Green(Current)
+#c8adf4 - Purple
+#fce134 - Yellow
+*/
+.container {
+    background-color: #fce134;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 300px; /* Minimum width set to 450px */
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+#title {
+    padding-top: 1em;
+}
+
+#content {
+    font-size: 1.5em;
+    background-color: #9fe32b;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    border-radius: 8px;
+}
+/*
+purple -#c8adf4
+
+yellow -#ebd37e
+*/

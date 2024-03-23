@@ -1,0 +1,21 @@
+{
+    "name": "Fake News Detector",
+    "version": "1.0.0",
+    "description": "Detects fake in news",
+    "manifest_version": 2,
+    "author": "Temi Aderogba",
+    "browser_action": {
+        "default_icon": "static/images/icon.png",
+        "default_popup": "index.html"
+      },
+      
+      "permissions": [
+        "downloads",
+        "storage",
+        "activeTab",
+        "http://localhost:5000/" 
+      ]
+      
+     
+   
+}
