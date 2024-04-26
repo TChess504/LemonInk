@@ -21,13 +21,23 @@ body {
     height: 200px;
     display:flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-.text{
+.fake-text{
     color: #ECEED8;
     font-size: 1.8rem;
     text-align: center;
+    margin-top: 2em;
 
+}
+
+.real-text{
+    color: #ECEED8;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 0.7em;
+    margin-top: 2em;
 }
 
 .logo{
@@ -35,11 +45,13 @@ body {
     font-size: 1rem;
     display:flex;
     justify-content: flex-end;
+    margin-right: 0.7em;
     
 }
 
 .img-container{
     align-self: center;
+    margin-left: 0.1em;
 }
 
 
