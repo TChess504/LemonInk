@@ -1,0 +1,45 @@
+body {
+    
+
+   
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    */
+    background-color: white;
+    margin:0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.container {
+    background-color: #6CAA00;
+    width: 359px; 
+    height: 200px;
+    display:flex;
+    flex-direction: column;
+}
+
+.text{
+    color: #ECEED8;
+    font-size: 1.8rem;
+    text-align: center;
+
+}
+
+.logo{
+    color:#3E3636;
+    font-size: 1rem;
+    display:flex;
+    justify-content: flex-end;
+    
+}
+
+.img-container{
+    align-self: center;
+}
+
+
