@@ -1,3 +1,5 @@
+# used with venv, has all the libraries
+
 click==8.1.3
 Flask==2.2.2
 gunicorn==20.1.0

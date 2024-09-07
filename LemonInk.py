@@ -1,3 +1,5 @@
+#For scraping, stores data in data.json, sends the result back to main.js in a variable called data
+
 #Import libraries
 import pandas as pd
 import numpy as np
@@ -7,13 +9,6 @@ import json
 import re
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import classification_report
-import re
-import string
 
 
 from flask import Flask, jsonify,request
@@ -27,10 +22,11 @@ import pandas as pd
 
 
 
-
+#Goes to url
 url = "https://www.dailymail.co.uk/news/article-13785465/The-real-reason-Prince-Harry-golden-ticket-diplomatic-visa-U-S-getting-green-card-financial-dagger-heart-Royal-Family.html"
 print("hi")
 
+#scrapes data
 html = urlopen(url)
 bsObj = BeautifulSoup(html, 'lxml')
 print(bsObj.find("p").get_text())
@@ -43,7 +39,7 @@ for child in divText.children:
     if(child)
     print(child)
 
-
+#puts data in JSON
 print(divText)
 with open('data.json', 'w', encoding='utf-8') as f:
   json.dump(str(divText), f, ensure_ascii=False, indent=4)
@@ -52,29 +48,13 @@ with open('data.json', 'w', encoding='utf-8') as f:
 #Sending Data with Flask
 app = Flask(__name__)
 
+
+#testing material
 @app.route('/receive_url', methods=['POST'])
 def receive_url():
     data = request.get_json()
     url = data['url']
     print(url)
-    #article = Article(url)
-    #article.download()
-    #article.parse()
-    html = urlopen(url)
-    bsObj = BeautifulSoup(html, 'lxml')
-    print(bsObj.find("h1").get_text())
-    print("hi")
-    article = bsObj.find("article")
-    divText = article.find("div", id="storytext")
-    [a.extract() for a in divText.findAll("aside")]
-    [d.extract() for d in divText.findAll("div")]
-    print(divText.get_text())
-    with open('data.json', 'w', encoding='utf-8') as f:
-      json.dump(divText.get_text(), f, ensure_ascii=False, indent=4)
-
-    with open('data.json', 'r', encoding='utf-8') as f:
-      contents = f.read()
-
     
     
     # Process the URL or perform any other actions with it
