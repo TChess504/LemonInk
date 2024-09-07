@@ -29,7 +29,13 @@ body {
     font-size: 1.8rem;
     text-align: center;
     margin-top: 2em;
-
+    display: 'none';
+}
+.logo-box{
+    color: #ECEED8;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-top: 0.5em;
 }
 
 .real-text{

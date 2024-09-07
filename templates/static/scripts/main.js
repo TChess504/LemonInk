@@ -1,4 +1,4 @@
-
+jQuery(".fake-text").find('div').first().hide();
 chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
     let url = tabs[0].url;
     // use `url` here inside the callback because it's asynchronous!
@@ -30,11 +30,13 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
                 if (data.message === "False") {
                     articleCredible = false;
                     document.getElementById('content').innerText = "This news is not credible!"; 
+                    document.getElementsByClassName('logo-box')[0].style.display = 'none';
                     return articleCredible;
                 }else if (data.message === "True") {
                     articleCredible = true;
                     document.getElementById('content').innerText = "This news is credible!";
-                    return articleCredible;
+                    document.getElementsByClassName('logo-box')[0].style.display    = 'none';
+                 return articleCredible;
                 }
             })
             .catch(error => console.error('Error:', error));
@@ -42,6 +44,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
         return false;
     
     }
+document.getElementsByClassName('fake-text')[0].style.display    = 'none';
 
 isCredibleOrNot();
  
